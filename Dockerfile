@@ -1,4 +1,4 @@
-FROM node:10
+FROM node:16.15-alpine3.16
 
 WORKDIR /opt/roomba-exporter
 
@@ -8,5 +8,5 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 8080
+EXPOSE 7000
 CMD [ "node", "index.js" ]
